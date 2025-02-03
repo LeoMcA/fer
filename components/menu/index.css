@@ -1,0 +1,146 @@
+.menu-new {
+  position: relative;
+}
+
+.menu-new__tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  column-gap: 8px;
+
+  button {
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-block-end: none;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    font: inherit;
+    cursor: pointer;
+
+    &:is([aria-expanded='true'], :hover) {
+      background-color: var(--background-secondary);
+      color: var(--text-primary);
+    }
+
+    &[aria-expanded='true'] {
+      z-index: 1;
+      border-color: var(--text-primary);
+    }
+
+    svg {
+      color: var(--text-secondary);
+
+      [aria-expanded='true'] & {
+        scale: -1;
+      }
+    }
+  }
+
+  a {
+    padding: 8px;
+    color: var(--text-secondary);
+  }
+}
+
+.menu-new__panel {
+  position: absolute;
+  inset: auto 0 auto 0;
+  margin-block-start: -1px;
+  border: 1px solid var(--text-primary);
+  background-color: var(--background-secondary);
+
+  h4 {
+    margin: 0;
+    padding: 16px;
+    font-weight: normal;
+    grid-column: span 3;
+
+    a {
+      color: var(--link-normal);
+    }
+  }
+}
+
+.menu-new__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-block-start: 1px solid var(--text-primary);
+}
+
+.menu-new__content-full {
+  display: grid;
+  row-gap: 20px;
+  padding: 16px;
+  background-color: var(--background-primary);
+  grid-column: span 3;
+}
+
+.menu-new__content-primary {
+  display: grid;
+  row-gap: 20px;
+  padding: 16px;
+  background-color: var(--background-primary);
+}
+
+.menu-new__content-secondary {
+  padding: 16px;
+  display: grid;
+  row-gap: 20px;
+  grid-column: span 2;
+  grid-template-columns: subgrid;
+}
+
+.menu-new__list {
+  margin: 0;
+  display: grid;
+  row-gap: 8px;
+  align-content: start;
+
+  dt {
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    row-gap: 8px;
+  }
+
+  a {
+    color: var(--text-primary);
+  }
+}
+
+.menu-new__featured {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  row-gap: 12px;
+
+  a {
+    display: inline flex;
+    align-items: center;
+    column-gap: 8px;
+    color: var(--text-primary);
+
+    svg {
+      fill: var(--text-secondary);
+    }
+  }
+}

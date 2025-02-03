@@ -1,0 +1,17 @@
+{
+  "name": "fer",
+  "version": "0.0.1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florian Dieminger",
+  "license": "MPL-2.0",
+  "description": "",
+  "dependencies": {
+    "@lit-labs/ssr": "^3.3.0",
+    "express": "^5.0.1",
+    "lit-html": "^3.2.1"
+  }
+}
