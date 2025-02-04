@@ -1,8 +1,10 @@
+@import "colors/index.css";
 @import "fonts/index.css";
 @import "global/index.css";
 
 /* Components */
 
+/*
 @import "breadcrumbs/index.css";
 @import "color-theme/index.css";
 @import "content/index.css";
@@ -15,7 +17,6 @@
 @import "reference-layout/index.css";
 @import "reference-toc/index.css";
 
-/*
 @import 'alert/index.css';
 @import 'article-footer/index.css';
 @import 'banner/index.css';

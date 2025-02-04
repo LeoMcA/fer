@@ -1,8 +1,8 @@
-.menu-new {
+.menu {
   position: relative;
 }
 
-.menu-new__tabs {
+.menu__tabs {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -48,7 +48,7 @@
   }
 }
 
-.menu-new__panel {
+.menu__panel {
   position: absolute;
   inset: auto 0 auto 0;
   margin-block-start: -1px;
@@ -67,13 +67,13 @@
   }
 }
 
-.menu-new__content {
+.menu__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-block-start: 1px solid var(--text-primary);
 }
 
-.menu-new__content-full {
+.menu__content-full {
   display: grid;
   row-gap: 20px;
   padding: 16px;
@@ -81,14 +81,14 @@
   grid-column: span 3;
 }
 
-.menu-new__content-primary {
+.menu__content-primary {
   display: grid;
   row-gap: 20px;
   padding: 16px;
   background-color: var(--background-primary);
 }
 
-.menu-new__content-secondary {
+.menu__content-secondary {
   padding: 16px;
   display: grid;
   row-gap: 20px;
@@ -96,7 +96,7 @@
   grid-template-columns: subgrid;
 }
 
-.menu-new__list {
+.menu__list {
   margin: 0;
   display: grid;
   row-gap: 8px;
@@ -126,7 +126,7 @@
   }
 }
 
-.menu-new__featured {
+.menu__featured {
   margin: 0;
   padding: 0;
   list-style: none;

@@ -4,14 +4,22 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rsbuild build",
+    "dev": "node ./server.js",
+    "preview": "node ./prod-server.js"
   },
   "author": "Florian Dieminger",
   "license": "MPL-2.0",
   "description": "",
   "dependencies": {
     "@lit-labs/ssr": "^3.3.0",
+    "@lit-labs/ssr-client": "^1.1.7",
     "express": "^5.0.1",
+    "lit": "^3.2.1",
     "lit-html": "^3.2.1"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "1.2.3",
+    "@rsbuild/plugin-react": "1.1.0"
   }
 }

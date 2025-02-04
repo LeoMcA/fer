@@ -4,6 +4,20 @@ import { BreadCrumbs } from "../../components/breadcrumbs/index.js";
 import { ReferenceLayout } from "../../components/reference-layout/index.js";
 import { Footer } from "../../components/footer/index.js";
 
+import "../../components/index.css";
+
+export function DocBody(context) {
+  return html`
+    <body class="page-layout">
+      <header class="page-layout__header">
+        ${Navigation(context)} ${BreadCrumbs(context)}
+      </header>
+      <div class="page-layout__main">${ReferenceLayout(context)}</div>
+      <div class="page-layout__footer">${Footer(context)}</div>
+    </body>
+  `;
+}
+
 export function Doc(context) {
   return html`
     <!DOCTYPE html>

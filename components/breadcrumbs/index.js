@@ -1,5 +1,7 @@
 import { html } from "lit-html";
 
+import "./index.css";
+
 export function BreadCrumbs(context) {
   return html`<div class="breadcrumbs">
     <div class="breadcrumbs__path">

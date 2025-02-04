@@ -1,0 +1,75 @@
+/* Basic */
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* Gray */
+
+:root {
+  --gray-1: #f9f9fb;
+  --gray-2: #e9e9e9;
+  --gray-3: #d9d9d9;
+  --gray-4: #c9c9c9;
+  --gray-5: #b9b9b9;
+  --gray-6: #a9a9a9;
+  --gray-7: #696969;
+  --gray-8: #2f2f2f;
+  --gray-9: #1b1b1b;
+}
+
+/* Tinted */
+
+:root {
+  --red: #f20d42;
+  --red-light: color-mix(in oklab, var(--red) 25%, white);
+  --red-dark: color-mix(in oklab, var(--red) 50%, black);
+
+  --orange: #f88120;
+  --orange-light: color-mix(in oklab, var(--orange) 25%, white);
+  --orange-dark: color-mix(in oklab, var(--orange) 50%, black);
+
+  --yellow: #f2da21;
+  --yellow-light: color-mix(in oklab, var(--yellow) 25%, white);
+  --yellow-dark: color-mix(in oklab, var(--yellow) 50%, black);
+
+  --green: #77c412;
+  --green-light: color-mix(in oklab, var(--green) 25%, white);
+  --green-dark: color-mix(in oklab, var(--green) 50%, black);
+
+  --blue: #3074e8;
+  --blue-light: color-mix(in oklab, var(--blue) 25%, white);
+  --blue-dark: color-mix(in oklab, var(--blue) 50%, black);
+}
+
+/* Brand */
+
+:root {
+  --brand-blue: light-dark(#0069c2, #8cb4ff);
+}
+
+/* Text */
+
+:root {
+  --text-primary: light-dark(var(--black), var(--white));
+  --text-secondary: light-dark(var(--gray-7), var(--gray-6));
+
+  --link-normal: light-dark(#0069c2, #8cb4ff);
+  --link-visited: light-dark(#551a8b, #ffadff);
+}
+
+/* Background */
+
+:root {
+  --background-primary: light-dark(var(--white), var(--gray-9));
+  --background-secondary: light-dark(var(--gray-2), var(--gray-8));
+
+  --background-secondary-alpha: light-dark(
+    color(from var(--black) srgb r g b / 8.5%),
+    color(from var(--white) srgb r g b / 8.5%)
+  );
+
+  --background-red: light-dark(var(--red-light), var(--red-dark));
+  --background-blue: light-dark(var(--blue-light), var(--blue-dark));
+}

@@ -1,13 +1,15 @@
 import { html } from "lit-html";
 
-export function MenuNew(context) {
-  return html`<nav class="menu-new">
-    <div class="menu-new__tabs">
+import "./index.css";
+
+export function Menu(context) {
+  return html`<nav class="menu">
+    <div class="menu__tabs">
       <button
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__html"
+        aria-controls="menu__html"
       >
         HTML
         <svg
@@ -27,7 +29,7 @@ export function MenuNew(context) {
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__css"
+        aria-controls="menu__css"
       >
         CSS
         <svg
@@ -47,7 +49,7 @@ export function MenuNew(context) {
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__javascript"
+        aria-controls="menu__javascript"
       >
         JavaScript
         <svg
@@ -67,7 +69,7 @@ export function MenuNew(context) {
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__apis"
+        aria-controls="menu__apis"
       >
         Web APIs
         <svg
@@ -87,7 +89,7 @@ export function MenuNew(context) {
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__all"
+        aria-controls="menu__all"
       >
         All
         <svg
@@ -107,7 +109,7 @@ export function MenuNew(context) {
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__learn"
+        aria-controls="menu__learn"
       >
         Learn
         <svg
@@ -127,7 +129,7 @@ export function MenuNew(context) {
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__tools"
+        aria-controls="menu__tools"
       >
         Tools
         <svg
@@ -147,7 +149,7 @@ export function MenuNew(context) {
         class="dropdown"
         type="button"
         aria-expanded="false"
-        aria-controls="menu-new__about"
+        aria-controls="menu__about"
       >
         About
         <svg
@@ -165,11 +167,11 @@ export function MenuNew(context) {
       </button>
       <a href="">Blog</a>
     </div>
-    <section class="menu-new__panel" id="menu-new__html" hidden>
+    <section class="menu__panel" id="menu__html" hidden>
       <h4><a href="">HTML: Markup language</a></h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-primary">
-          <dl class="menu-new__list">
+      <div class="menu__content">
+        <div class="menu__content-primary">
+          <dl class="menu__list">
             <dt>References</dt>
             <dd>
               <ul>
@@ -182,7 +184,7 @@ export function MenuNew(context) {
               </ul>
             </dd>
           </dl>
-          <dl class="menu-new__list">
+          <dl class="menu__list">
             <dt>Markup languages</dt>
             <dd>
               <ul>
@@ -193,8 +195,8 @@ export function MenuNew(context) {
             </dd>
           </dl>
         </div>
-        <div class="menu-new__content-secondary">
-          <dl class="menu-new__list">
+        <div class="menu__content-secondary">
+          <dl class="menu__list">
             <dt>Guides</dt>
             <dd>
               <ul>
@@ -210,11 +212,11 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-    <section class="menu-new__panel" id="menu-new__css" hidden>
+    <section class="menu__panel" id="menu__css" hidden>
       <h4><a href="">CSS: Styling language</a></h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-primary">
-          <dl class="menu-new__list">
+      <div class="menu__content">
+        <div class="menu__content-primary">
+          <dl class="menu__list">
             <dt>References</dt>
             <dd>
               <ul>
@@ -228,8 +230,8 @@ export function MenuNew(context) {
             </dd>
           </dl>
         </div>
-        <div class="menu-new__content-secondary">
-          <dl class="menu-new__list">
+        <div class="menu__content-secondary">
+          <dl class="menu__list">
             <dt>Guides</dt>
             <dd>
               <ul>
@@ -241,7 +243,7 @@ export function MenuNew(context) {
               </ul>
             </dd>
           </dl>
-          <dl class="menu-new__list">
+          <dl class="menu__list">
             <dt>Tools</dt>
             <dd>
               <ul>
@@ -255,11 +257,11 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-    <section class="menu-new__panel" id="menu-new__javascript" hidden>
+    <section class="menu__panel" id="menu__javascript" hidden>
       <h4><a href="">JavaScript. Scripting language</a></h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-primary">
-          <dl class="menu-new__list">
+      <div class="menu__content">
+        <div class="menu__content-primary">
+          <dl class="menu__list">
             <dt>References</dt>
             <dd>
               <ul>
@@ -272,8 +274,8 @@ export function MenuNew(context) {
             </dd>
           </dl>
         </div>
-        <div class="menu-new__content-secondary">
-          <dl class="menu-new__list">
+        <div class="menu__content-secondary">
+          <dl class="menu__list">
             <dt>Guides</dt>
             <dd>
               <ul>
@@ -287,11 +289,11 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-    <section class="menu-new__panel" id="menu-new__apis" hidden>
+    <section class="menu__panel" id="menu__apis" hidden>
       <h4><a href="">Web API. Programming interfaces</a></h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-primary">
-          <dl class="menu-new__list">
+      <div class="menu__content">
+        <div class="menu__content-primary">
+          <dl class="menu__list">
             <dt>References</dt>
             <dd>
               <ul>
@@ -304,15 +306,13 @@ export function MenuNew(context) {
             </dd>
           </dl>
         </div>
-        <div class="menu-new__content-secondary">
-          <dl class="menu-new__list">
+        <div class="menu__content-secondary">
+          <dl class="menu__list">
             <dt>Guides</dt>
             <dd>
               <ul>
                 <li><a href="">Using the web audio API</a></li>
-                <li>
-                  <a href="">Manipulating video with canvas</a>
-                </li>
+                <li><a href="">Manipulating video with canvas</a></li>
                 <li><a href="">Using the web animation API</a></li>
                 <li><a href="">See all…</a></li>
               </ul>
@@ -321,11 +321,11 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-    <section class="menu-new__panel" id="menu-new__all" hidden>
+    <section class="menu__panel" id="menu__all" hidden>
       <h4><a href="">All web technology</a></h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-primary">
-          <dl class="menu-new__list">
+      <div class="menu__content">
+        <div class="menu__content-primary">
+          <dl class="menu__list">
             <dt>References</dt>
             <dd>
               <ul>
@@ -351,8 +351,8 @@ export function MenuNew(context) {
             </dd>
           </dl>
         </div>
-        <div class="menu-new__content-secondary">
-          <dl class="menu-new__list">
+        <div class="menu__content-secondary">
+          <dl class="menu__list">
             <dt>Topics</dt>
             <dd>
               <ul>
@@ -377,11 +377,11 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-    <section class="menu-new__panel" id="menu-new__learn" hidden>
+    <section class="menu__panel" id="menu__learn" hidden>
       <h4><a href="">Learn web development</a></h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-primary">
-          <dl class="menu-new__list">
+      <div class="menu__content">
+        <div class="menu__content-primary">
+          <dl class="menu__list">
             <dt>Frontend developer course</dt>
             <dd>
               <ul>
@@ -392,8 +392,8 @@ export function MenuNew(context) {
             </dd>
           </dl>
         </div>
-        <div class="menu-new__content-secondary">
-          <dl class="menu-new__list">
+        <div class="menu__content-secondary">
+          <dl class="menu__list">
             <dt>Learn HTML</dt>
             <dd>
               <ul>
@@ -402,7 +402,7 @@ export function MenuNew(context) {
               </ul>
             </dd>
           </dl>
-          <dl class="menu-new__list">
+          <dl class="menu__list">
             <dt>Learn CSS</dt>
             <dd>
               <ul>
@@ -411,7 +411,7 @@ export function MenuNew(context) {
               </ul>
             </dd>
           </dl>
-          <dl class="menu-new__list">
+          <dl class="menu__list">
             <dt>Learn JavaScript</dt>
             <dd>
               <ul>
@@ -423,11 +423,11 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-    <section class="menu-new__panel" id="menu-new__tools" hidden>
+    <section class="menu__panel" id="menu__tools" hidden>
       <h4><a href="">List of MDN tools</a></h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-full">
-          <ul class="menu-new__featured">
+      <div class="menu__content">
+        <div class="menu__content-full">
+          <ul class="menu__featured">
             <li>
               <a href="">
                 <svg class="icon" width="24" height="24" viewBox="0 0 384 512">
@@ -494,11 +494,11 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-    <section class="menu-new__panel" id="menu-new__about" hidden>
+    <section class="menu__panel" id="menu__about" hidden>
       <h4>MDN Web Docs</h4>
-      <div class="menu-new__content">
-        <div class="menu-new__content-full">
-          <ul class="menu-new__featured">
+      <div class="menu__content">
+        <div class="menu__content-full">
+          <ul class="menu__featured">
             <li>
               <a href="">
                 <svg
@@ -554,5 +554,5 @@ export function MenuNew(context) {
         </div>
       </div>
     </section>
-  </nav>`;
+  </nav> `;
 }

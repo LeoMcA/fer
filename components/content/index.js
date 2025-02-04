@@ -1,6 +1,8 @@
 import { html, nothing } from "lit-html";
 import { unsafeStatic, html as hh } from "lit-html/static.js";
 
+import "./index.css";
+
 export function Content(context) {
   return html`<div class="content">
     <h1>${context?.doc?.title}</h1>

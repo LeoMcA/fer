@@ -1,4 +1,7 @@
 import { html } from "lit-html";
+
+import "./index.css";
+
 export function Footer(context) {
   return html`<div class="footer">
     <div class="footer__mdn">

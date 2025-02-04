@@ -1,5 +1,7 @@
 import { html } from "lit-html";
 
+import "./index.css";
+
 export function ColorTheme(context) {
   return html`<div class="color-theme">
     <button
