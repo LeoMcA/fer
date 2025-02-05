@@ -4,6 +4,7 @@ import { BreadCrumbs } from "../../components/breadcrumbs/index.js";
 import { ReferenceLayout } from "../../components/reference-layout/index.js";
 import { Footer } from "../../components/footer/index.js";
 
+import "./index.css";
 import "../../components/index.css";
 
 export function DocBody(context) {
