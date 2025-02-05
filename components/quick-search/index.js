@@ -5,9 +5,9 @@ export class Quickserach extends LitElement {
     .quick-search {
       display: grid;
       grid-template-columns: 1fr min-content min-content;
-      padding-inline: 12px 3px;
-      width: 80px;
-      height: 32px;
+      padding-inline: 0.75rem 3px;
+      width: 5rem;
+      height: 2rem;
       align-items: center;
       border-radius: calc(infinity * 1px);
       border: 1px solid var(--text-secondary);
@@ -41,8 +41,8 @@ export class Quickserach extends LitElement {
       padding: 0;
       display: grid;
       place-items: center;
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
       border: none;
       border-radius: 50%;
       background-color: transparent;

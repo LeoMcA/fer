@@ -2,11 +2,11 @@
 
 .reference-layout {
     display: grid;
-    column-gap: 48px;
-    padding-block: 8px 48px;
+    column-gap: 3rem;
+    padding-block: 0.5rem 3rem;
 
     grid-template-rows: auto;
-    grid-template-columns: 1fr minmax(0, 2.5fr) 240px;
+    grid-template-columns: 1fr minmax(0, 2.5fr) 15rem;
 
     @media (width < 769px) {
         grid-template-rows: auto;
@@ -26,7 +26,7 @@
 /* Sidebar */
 
 .reference-layout__sidebar {
-    padding-inline: 16px;
+    padding-inline: 1rem;
 
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -45,7 +45,7 @@
 /* Content */
 
 .reference-layout__content {
-    padding-inline: 16px;
+    padding-inline: 1rem;
 
     grid-row: 1 / 2;
     grid-column: 2 / 3;
@@ -64,7 +64,7 @@
 /* TOC */
 
 .reference-layout__toc {
-    padding-inline: 16px;
+    padding-inline: 1rem;
 
     grid-row: 1 / 2;
     grid-column: 3 / 4;
