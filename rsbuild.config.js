@@ -1,18 +1,26 @@
 import { defineConfig } from "@rsbuild/core";
+import { pluginReact } from "@rsbuild/plugin-react";
 
 export default defineConfig({
   environments: {
-    web: {
+    client: {
       output: {
         manifest: true,
         target: "web",
+        emitCss: true,
         distPath: {
           root: "dist/client",
         },
+        assetPrefix: "/client/",
+      },
+      dev: {
+        assetPrefix: "/client/",
       },
       source: {
+        tsconfigPath: "./legacy/tsconfig.json",
         entry: {
           index: "./entry.client.js",
+          legacy: "./legacy/index.tsx",
         },
       },
     },
@@ -24,6 +32,10 @@ export default defineConfig({
         distPath: {
           root: "dist/ssr",
         },
+        assetPrefix: "/ssr/",
+      },
+      dev: {
+        assetPrefix: "/ssr/",
       },
       source: {
         entry: {
@@ -35,9 +47,9 @@ export default defineConfig({
   tools: {
     htmlPlugin: false,
   },
-  output: {
-    cssModules: {
-      mode: "global",
+  performance: {
+    chunkSplit: {
+      strategy: "split-by-module",
     },
   },
 });

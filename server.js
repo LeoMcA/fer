@@ -7,10 +7,10 @@ const templateHtml = fs.readFileSync("./template.html", "utf-8");
 let ssrManifest;
 let clientManifest;
 
-function tagsFromManifest(manifest) {
+function tagsFromManifest(manifest, entry = "index") {
   const { entries } = JSON.parse(manifest);
 
-  const { js = [], css = [] } = entries["index"].initial;
+  const { js = [], css = [] } = entries[entry].initial;
 
   const scriptTags = js
     .map((url) => `<script src="${url}" defer></script>`)
@@ -29,13 +29,21 @@ const serverRender = (serverAPI) => async (req, res) => {
     tagsFromManifest(ssrManifest);
   const { scriptTags: clientScriptTags, styleTags: clientStyleTags } =
     tagsFromManifest(clientManifest);
+  const { scriptTags: legacyScriptTags, styleTags: legacyStyleTags } =
+    tagsFromManifest(clientManifest, "legacy");
+
+  const legacyTags = req?.path?.endsWith("settings")
+    ? [legacyScriptTags, legacyStyleTags]
+    : [];
 
   const tags = [
-    ssrScriptTags,
+    //ssrScriptTags,
     ssrStyleTags,
     clientScriptTags,
     clientStyleTags,
+    ...legacyTags,
   ].join("\n");
+  console.log(tags);
   const html = templateHtml
     .replace("<!--app-content-->", markup)
     .replace("<!--app-head-->", tags);
@@ -54,6 +62,11 @@ export async function startDevServer() {
     rsbuildConfig: content,
   });
 
+  const app = express();
+
+  // Create Rsbuild DevServer instance
+  const rsbuildServer = await rsbuild.createDevServer();
+
   rsbuild.onDevCompileDone(async () => {
     // update manifest info when rebuild
     ssrManifest = await fs.promises.readFile(
@@ -64,12 +77,8 @@ export async function startDevServer() {
       "./dist/client/manifest.json",
       "utf-8",
     );
+    rsbuildServer.printUrls();
   });
-
-  const app = express();
-
-  // Create Rsbuild DevServer instance
-  const rsbuildServer = await rsbuild.createDevServer();
 
   const serverRenderMiddleware = serverRender(rsbuildServer);
 
