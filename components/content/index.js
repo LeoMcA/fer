@@ -12,6 +12,8 @@ export function Content(context) {
 
 function Section({ type, value }) {
   switch (type) {
+    case "browser_compatibility":
+      return BCD(value);
     default:
       return Prose(value);
   }
@@ -19,8 +21,15 @@ function Section({ type, value }) {
 
 function Prose({ id, title, content, isH3 }) {
   const level = isH3 ? 3 : 2;
-  return hh`<section aria-labelledby="{id}">
+  return hh`<section aria-labelledby="${id}">
     ${Heading(level, id, title)} ${unsafeStatic(content)}
+  </section>`;
+}
+
+function BCD({ id, title, query, isH3 }) {
+  const level = isH3 ? 3 : 2;
+  return hh`<section aria-labelledby="${id}">
+    ${Heading(level, id, title)} <bcd-table query="${query}"></bcd-table>
   </section>`;
 }
 
