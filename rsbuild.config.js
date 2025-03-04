@@ -1,6 +1,8 @@
 import { defineConfig } from "@rsbuild/core";
+import { pluginSvg } from "./mdnsvg-plugin/svg.js";
 
 export default defineConfig({
+  plugins: [pluginSvg()],
   environments: {
     client: {
       output: {
