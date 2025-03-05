@@ -1,5 +1,7 @@
-import { html, nothing } from "lit-html";
+import { html } from "lit-html";
 import { unsafeStatic, html as hh } from "lit-html/static.js";
+
+import { Heading } from "../heading-anchor/index.js";
 
 import "./index.css";
 
@@ -31,15 +33,4 @@ function BCD({ id, title, query, isH3 }) {
   return hh`<section aria-labelledby="${id}">
     ${Heading(level, id, title)} <bcd-table query="${query}"></bcd-table>
   </section>`;
-}
-
-/**
- * @param (number) level
- * @param (string?) id
- * @param (string) title
- */
-function Heading(level, id, title) {
-  return id
-    ? hh`<${unsafeStatic("h" + level)} id=${id}>${title}</${unsafeStatic("h" + level)}>`
-    : nothing;
 }

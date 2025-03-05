@@ -3,6 +3,10 @@ import { ReferenceToc } from "../reference-toc/index.js";
 import { Content } from "../content/index.js";
 
 import "./index.css";
+import "../definition-list/index.css";
+import "../formal-definition/index.css";
+import "../formal-syntax/index.css";
+
 import { LeftSidebar } from "../left-sidebar/index.js";
 
 export function ReferenceLayout(context) {
